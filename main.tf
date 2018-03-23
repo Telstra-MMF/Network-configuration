@@ -39,7 +39,7 @@ resource "opc_compute_ip_network" "cla-intocm-wloc-admin" {
 resource "opc_compute_ip_network" "cla-intocm-wloc-shared" {
   name                = "cla-intocm-wloc-shared"
   description         = "cla-intocm-wloc-shared"
-  ip_address_prefix   = ""
+  ip_address_prefix   = "10.195.72.0/24"
   ip_network_exchange = "${opc_compute_ip_network_exchange.cla-intocm-ipx001.name}"
   public_napt_enabled = false
 }
@@ -76,7 +76,7 @@ resource "opc_compute_ip_network" "cla-npintocm-wloc-admin" {
 resource "opc_compute_ip_network" "cla-npintocm-wloc-shared" {
   name                = "cla-npintocm-wloc-shared"
   description         = "cla-npintocm-wloc-shared"
-  ip_address_prefix   = ""
+  ip_address_prefix   = "10.195.76.0/24"
   ip_network_exchange = "${opc_compute_ip_network_exchange.cla-npintocm-ipx001.name}"
   public_napt_enabled = false
 }
